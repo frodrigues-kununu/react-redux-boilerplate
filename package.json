@@ -1,0 +1,77 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "0.0.1",
+  "description": "My personal boilerplate to quickly setup new react / redux based projects.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "npm test -- --watch",
+    "generate-docs": "jsdoc js/actions js/components js/containers -r -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scorchloh/react-redux-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "minimal",
+    "boilerplate"
+  ],
+  "author": "Fábio Rodrigues",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scorchloh/react-redux-boilerplate/issues"
+  },
+  "homepage": "https://github.com/scorchloh/react-redux-boilerplate#readme",
+  "dependencies": {
+    "cross-fetch": "^2.2.0",
+    "history": "^4.7.2",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
+    "babel-plugin-typecheck": "^3.9.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.1.5",
+    "css-loader": "^0.28.11",
+    "fetch-mock": "^6.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^22.4.3",
+    "jsdoc": "^3.5.5",
+    "node-sass": "^4.9.0",
+    "redux-devtools": "^3.4.1",
+    "redux-devtools-dock-monitor": "^1.1.3",
+    "redux-devtools-log-monitor": "^1.4.0",
+    "redux-mock-store": "^1.5.1",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-middleware": "^3.1.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-hot-middleware": "^2.22.1"
+  }
+}
