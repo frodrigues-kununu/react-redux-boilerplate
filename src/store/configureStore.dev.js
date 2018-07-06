@@ -5,28 +5,28 @@ import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 // import api from '../middleware/api';
 import rootReducer from '../reducers';
-import DevTools from '../containers/DevTools';
+import DevTools from '../containers/DevTools/DevTools';
 
 export default function configureStore(initialState) {
-
   const routingMiddleware = routerMiddleware();
 
-  const store = createStore(
+  // const store =
+  return createStore(
     rootReducer,
     initialState,
     compose(
       applyMiddleware(thunk, routingMiddleware, createLogger()),
-      DevTools.instrument()
-    )
+      DevTools.instrument(),
+    ),
   );
 
-  if (module.hot) {
-    // Enable Webpack hot module replacement for reducers
-    module.hot.accept('../reducers', () => {
-      const nextRootReducer = require('../reducers').default;
-      store.replaceReducer(nextRootReducer);
-    });
-  }
+  // if (module.hot) {
+  //   // Enable Webpack hot module replacement for reducers
+  //   module.hot.accept('../reducers', () => {
+  //     const nextRootReducer = require('../reducers').default;
+  //     store.replaceReducer(nextRootReducer);
+  //   });
+  // }
 
-  return store;
+  // return store;
 }

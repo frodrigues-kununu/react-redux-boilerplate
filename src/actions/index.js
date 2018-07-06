@@ -1,9 +1,10 @@
-export const TEST_ACTION = "TEST_ACTION";
+export const TEST_ACTION = 'TEST_ACTION';
+
 /**
  * Set action
- * 
+ *
  * @export
- * @param {any} selectedItem 
+ * @param {any} selectedItem
  * @returns object
  */
 export function setTestAction(selectedItem) {

@@ -6,12 +6,11 @@ import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
 export default function configureStore(initialState) {
-
   const routingMiddleware = routerMiddleware(browserHistory);
 
   return createStore(
     rootReducer,
     initialState,
-    applyMiddleware(thunk, routingMiddleware)
+    applyMiddleware(thunk, routingMiddleware),
   );
 }
