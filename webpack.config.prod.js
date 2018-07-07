@@ -32,6 +32,7 @@ const config = {
         use: [
           'style-loader',
           'css-loader',
+          'postcss-loader',
           'sass-loader',
         ],
         include: __dirname,

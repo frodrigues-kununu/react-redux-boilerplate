@@ -1,4 +1,4 @@
-import * as ActionTypes from '../actions';
+import * as ActionTypes from '../actions/appActions';
 
 function testReducer(state = { path: '' }, action) {
   switch (action.type) {

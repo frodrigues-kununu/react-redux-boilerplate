@@ -4,7 +4,7 @@ import { routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 // import api from '../middleware/api';
-import rootReducer from '../reducers';
+import rootReducer from '../reducers/rootReducer';
 import DevTools from '../containers/DevTools/DevTools';
 
 export default function configureStore(initialState) {
