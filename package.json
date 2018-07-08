@@ -4,7 +4,7 @@
   "description": "My personal boilerplate to quickly setup new react / redux based projects.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.dev.js --mode development --hot",
+    "start": "webpack-dev-server --config ./webpack.config.dev.js --mode development --inline --hot",
     "start:prod": "webpack-dev-server --config ./webpack.config.prod.js --mode production",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "test": "jest",
@@ -29,11 +29,13 @@
   },
   "homepage": "https://github.com/scorchloh/react-redux-boilerplate#readme",
   "dependencies": {
+    "connected-react-router": "^4.3.0",
     "cross-fetch": "^2.2.0",
     "history": "^4.7.2",
     "prop-types": "^15.6.1",
-    "react": "^16.3.2",
+    "react": "^16.4.1",
     "react-dom": "^16.3.2",
+    "react-hot-loader": "^4.3.3",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",

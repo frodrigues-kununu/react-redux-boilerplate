@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
@@ -35,4 +36,4 @@ App.defaultProps = {
   path: '',
 };
 
-export default connect(mapStateToProps, {})(App);
+export default hot(module)(App); // connect(mapStateToProps, {})(App);
