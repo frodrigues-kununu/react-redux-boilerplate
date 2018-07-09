@@ -8,6 +8,8 @@ import Footer from '../../components/Footer/Footer';
 
 // import { } from '../actions/index';
 
+import './App.scss';
+
 const App = (props) => {
   const { path } = props;
   return (

@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/scorchloh/react-redux-boilerplate#readme",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "connected-react-router": "^4.3.0",
     "cross-fetch": "^2.2.0",
     "history": "^4.7.2",
@@ -71,6 +72,7 @@
     "jest": "^22.4.3",
     "jsdoc": "^3.5.5",
     "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
     "react-hot-loader": "^4.3.3",
     "redux-devtools": "^3.4.1",
     "redux-devtools-dock-monitor": "^1.1.3",

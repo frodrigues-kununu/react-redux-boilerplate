@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+require('babel-polyfill');
 
 const config = {
   watch: true,
   mode: 'development',
   target: 'web',
-  entry: './src/index',
+  entry: ['babel-polyfill', './src/index'],
   devServer: {
     historyApiFallback: true,
   },
@@ -20,7 +21,7 @@ const config = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         options: {
-          presets: ['es2015', 'react'],
+          presets: ['env', 'react'],
         },
         exclude: /node_modules/,
         include: __dirname,

@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+require('babel-polyfill');
+require('autoprefixer');
 
 const config = {
   /*
@@ -8,7 +10,7 @@ const config = {
   */
   mode: 'production',
   target: 'web',
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/index'],
 
   output: {
     path: `${__dirname}/dist`,
@@ -22,7 +24,7 @@ const config = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         options: {
-          presets: ['es2015', 'react'],
+          presets: ['env', 'react'],
         },
         exclude: /node_modules/,
         include: __dirname,
