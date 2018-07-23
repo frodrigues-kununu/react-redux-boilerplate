@@ -11,7 +11,7 @@ import configureStore from './store/configureStore';
 import Root from './containers/Root/Root';
 
 //app styles
-require("./stylesheets/index.scss");
+import "./stylesheets/index.scss";
 
 
 const storeConfig = configureStore();

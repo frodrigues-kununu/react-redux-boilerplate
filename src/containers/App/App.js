@@ -2,20 +2,17 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Header from '../../components/Header/Header';
-import MainContent from '../../components/MainContent/MainContent';
-import Footer from '../../components/Footer/Footer';
-
+import PageWrapper from "../../components/PageWrapper/PageWrapper";
 import './App.scss';
 
+import {
+  setSagaTestAction
+} from '../../actions/appActions';
+
 const App = (props) => {
-  const { path } = props;
+  const { path, setSagaTestAction } = props;
   return (
-    <div className="page-wrapper">
-      <Header />
-      <MainContent />
-      <Footer />
-    </div>
+    <PageWrapper setSagaTestAction={setSagaTestAction} />
   );
 };
 
@@ -28,12 +25,21 @@ function mapStateToProps(state) {
   };
 }
 
+function mapStateToProps(state) {
+  return { todos: state.todos }
+}
+
+const mapDispatchToProps = {
+  setSagaTestAction
+};
+
 App.propTypes = {
   path: PropTypes.string,
+  setSagaTestAction: PropTypes.func.isRequired,
 };
 
 App.defaultProps = {
   path: '',
 };
 
-export default hot(module)(App); // connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

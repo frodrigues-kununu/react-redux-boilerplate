@@ -6,6 +6,7 @@ Includes (so far):
 * Basic folder structure for components, styles and tests;
 * Webpack configuration for development and production;
 * React and redux integration;
+* Support for redux-thunk and redux-saga (I will probably delete thunk related code later)
 * Hot Module Replacement;
 * Routing using connected-react-router;
 * Eslint configuration (airbnb);
