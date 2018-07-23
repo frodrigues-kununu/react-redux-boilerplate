@@ -24,7 +24,7 @@ const { enzymeWrapper, props } = setup();
 
 describe('<App />', () => {
   //snapshot testing
-  test('should render correctly', () => {
+  test('should render correctly ', () => {
     expect(toJSON(enzymeWrapper)).toMatchSnapshot();
   });
 });
